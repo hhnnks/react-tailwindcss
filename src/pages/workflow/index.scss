@@ -1,0 +1,75 @@
+@import "bpmn-js/dist/assets/diagram-js.css";
+@import "bpmn-js/dist/assets/bpmn-font/css/bpmn.css";
+@import "bpmn-js/dist/assets/bpmn-font/css/bpmn-codes.css";
+@import "bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css";
+
+.view-mode {
+  .el-header,
+  .el-aside,
+  .djs-palette,
+  .bjs-powered-by {
+    display: none;
+  }
+  .el-loading-mask {
+    background-color: initial;
+  }
+  .el-loading-spinner {
+    display: none;
+  }
+}
+.flow-containers {
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+  .canvas {
+    width: 100%;
+    height: 100%;
+  }
+  .panel {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 300px;
+  }
+  .load {
+    margin-right: 10px;
+  }
+  .el-form-item__label {
+    font-size: 13px;
+  }
+
+  .djs-palette {
+    left: 0px !important;
+    top: 0px;
+    border-top: none;
+  }
+
+  .djs-container svg {
+    min-height: 650px;
+  }
+
+  .flow-header {
+    text-align: "center";
+    color: "#fff";
+    height: 64;
+    padding-inline: 50;
+    line-height: "64px";
+    background-color: transparent;
+    border-bottom: 1px solid rgb(218 218 218) !important;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .ant-btn{
+      margin: 0 5px;
+    }
+  }
+
+  .flow-content {
+    text-align: "center";
+    color: "#fff";
+    min-height: 64;
+    background-color: "#7dbcea";
+  }
+}
