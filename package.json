@@ -12,17 +12,19 @@
   "dependencies": {
     "@paddlejs/paddlejs-core": "^2.2.0",
     "amfe-flexible": "^2.2.1",
-    "antd": "^5.8.4",
+    "antd": "^5.9.0",
     "bpmn-js": "^13.2.2",
     "less": "^4.2.0",
     "postcss-pxtorem": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-papaparse": "^4.1.0",
+    "react-router-dom": "^6.16.0",
     "sass": "^1.66.1",
     "workflow-bpmn-modeler": "^0.2.8"
   },
   "devDependencies": {
+    "@types/node": "^20.6.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

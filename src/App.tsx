@@ -1,15 +1,9 @@
-import "./App.css";
-
 import React, { useEffect, useRef } from "react";
 
-import Demo_1 from "./view/demo_1";
+import Router from "./routers";
 
 function App() {
-  return (
-    <React.Fragment>
-      <Demo_1 />
-    </React.Fragment>
-  );
+  return <Router />;
 }
 
 export default App;
