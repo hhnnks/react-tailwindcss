@@ -4,6 +4,7 @@ import { Navigate, useRoutes } from "react-router-dom";
 import lazyLoad from "./lazyLoad";
 import Login from "@/pages/login";
 import Page404 from "@/pages/page404";
+import ComponentTabs from "@/pages/tabs";
 
 export const rootRouter = [
   {
@@ -17,6 +18,15 @@ export const rootRouter = [
       requiresAuth: false,
       title: "login",
       key: "login",
+    },
+  },
+  {
+    path: "/ComponentTabs",
+    element: <ComponentTabs />,
+    meta: {
+      requiresAuth: false,
+      title: "ComponentTabs",
+      key: "ComponentTabs",
     },
   },
   {
