@@ -5,11 +5,11 @@ import lazyLoad from "./lazyLoad";
 import Login from "@/pages/login";
 import Page404 from "@/pages/page404";
 import ComponentTabs from "@/pages/tabs";
-
+import Button from "@/components/Button";
 export const rootRouter = [
   {
     path: "/",
-    element: <Navigate to="/login" />,
+    element: <Navigate to="/button" />,
   },
   {
     path: "/login",
@@ -27,6 +27,15 @@ export const rootRouter = [
       requiresAuth: false,
       title: "ComponentTabs",
       key: "ComponentTabs",
+    },
+  },
+  {
+    path: "/button",
+    element: <Button />,
+    meta: {
+      requiresAuth: false,
+      title: "Button",
+      key: "Button",
     },
   },
   {
