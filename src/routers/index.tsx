@@ -6,10 +6,11 @@ import Login from "@/pages/login";
 import Page404 from "@/pages/page404";
 import ComponentTabs from "@/pages/tabs";
 import Button from "@/components/Button";
+import Demo_GridBox from "@/view/demo_hover_gridbox";
 export const rootRouter = [
   {
     path: "/",
-    element: <Navigate to="/button" />,
+    element: <Navigate to="/Demo_GridBox" />,
   },
   {
     path: "/login",
@@ -38,6 +39,16 @@ export const rootRouter = [
       key: "Button",
     },
   },
+  {
+    path: "/Demo_GridBox",
+    element: <Demo_GridBox />,
+    meta: {
+      requiresAuth: false,
+      title: "Demo_GridBox",
+      key: "Demo_GridBox",
+    },
+  },
+
   {
     path: "/404",
     element: <Page404 />,
