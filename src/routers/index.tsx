@@ -5,11 +5,14 @@ import lazyLoad from "./lazyLoad";
 import Login from "@/pages/login";
 import Page404 from "@/pages/page404";
 import ComponentTabs from "@/pages/tabs";
+import StrategicMode from "@/components/StrategicMode";
+import EditTable from "@/pages/editTable/classEditTable";
+import DesignPatterns from "@/components/DesignPatterns";
 
 export const rootRouter = [
   {
     path: "/",
-    element: <Navigate to="/login" />,
+    element: <Navigate to="/editTable" />,
   },
   {
     path: "/login",
@@ -21,12 +24,39 @@ export const rootRouter = [
     },
   },
   {
-    path: "/ComponentTabs",
+    path: "/componentTabs",
     element: <ComponentTabs />,
     meta: {
       requiresAuth: false,
-      title: "ComponentTabs",
-      key: "ComponentTabs",
+      title: "componentTabs",
+      key: "componentTabs",
+    },
+  },
+  {
+    path: "/strategicMode",
+    element: <StrategicMode />,
+    meta: {
+      requiresAuth: false,
+      title: "strategicMode",
+      key: "strategicMode",
+    },
+  },
+  {
+    path: "/designPatterns",
+    element: <DesignPatterns />,
+    meta: {
+      requiresAuth: false,
+      title: "designPatterns",
+      key: "designPatterns",
+    },
+  },
+  {
+    path: "/editTable",
+    element: <EditTable />,
+    meta: {
+      requiresAuth: false,
+      title: "editTable",
+      key: "editTable",
     },
   },
   {

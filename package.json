@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server --watch json-server/db.json --port 3300"
   },
   "dependencies": {
     "@paddlejs/paddlejs-core": "^2.2.0",
     "amfe-flexible": "^2.2.1",
     "antd": "^5.9.0",
+    "axios": "^1.5.1",
     "bpmn-js": "^13.2.2",
+    "json-server": "^0.17.4",
     "less": "^4.2.0",
     "postcss-pxtorem": "^6.0.0",
     "react": "^18.2.0",
@@ -21,6 +24,7 @@
     "react-papaparse": "^4.1.0",
     "react-router-dom": "^6.16.0",
     "sass": "^1.66.1",
+    "styled-components": "^6.1.0",
     "workflow-bpmn-modeler": "^0.2.8"
   },
   "devDependencies": {
