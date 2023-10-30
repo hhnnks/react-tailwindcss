@@ -59,24 +59,24 @@ export const rootRouter = [
       key: "editTable",
     },
   },
-  {
-    path: "/button",
-    element: <Button />,
-    meta: {
-      requiresAuth: false,
-      title: "Button",
-      key: "Button",
-    },
-  },
-  {
-    path: "/Demo_GridBox",
-    element: <Demo_GridBox />,
-    meta: {
-      requiresAuth: false,
-      title: "Demo_GridBox",
-      key: "Demo_GridBox",
-    },
-  },
+  // {
+  //   path: "/button",
+  //   element: <Button />,
+  //   meta: {
+  //     requiresAuth: false,
+  //     title: "Button",
+  //     key: "Button",
+  //   },
+  // },
+  // {
+  //   path: "/Demo_GridBox",
+  //   element: <Demo_GridBox />,
+  //   meta: {
+  //     requiresAuth: false,
+  //     title: "Demo_GridBox",
+  //     key: "Demo_GridBox",
+  //   },
+  // },
 
   {
     path: "/404",
