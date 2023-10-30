@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
-import { getList } from "@/api/template";
+import { getList } from "@/api/jsonServer";
 
-export default class ClassEditTable extends React.Component {
+export default class ClassEditTable extends React.Component<React.ReactElement> {
   componentDidMount() {
     this.fatchList();
   }
@@ -104,7 +104,7 @@ export default class ClassEditTable extends React.Component {
           </thead>
           <tbody>
             <tr>
-              <td className="editable" contenteditable="true">
+              <td className="editable" suppressContentEditableWarning contentEditable={true}>
                 张三
               </td>
               <td className="editable">18</td>
