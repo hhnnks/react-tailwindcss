@@ -105,6 +105,18 @@ export default class ClassEditTable extends React.Component<React.ReactElement> 
                     button
                 </div>
 
+                <div className="boxx" style={{
+                    width: '200px',
+                    height: '140px',
+                    backgroundColor: '#fff',
+                    // boxShadow: '0 1px 7px 2px rgba(110, 109, 109, 0.2)',
+                    boxShadow: '0 2px 9px 0 rgba(188, 195, 197, 0.5)',
+                    margin:50,
+                    borderRadius: 10,
+                }}>
+                    bbxx
+                </div>
+
                 <table id="editable-table">
                     <thead>
                         <tr>

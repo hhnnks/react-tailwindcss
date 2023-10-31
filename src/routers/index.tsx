@@ -6,9 +6,11 @@ import Login from "@/pages/login";
 import Page404 from "@/pages/page404";
 import ComponentTabs from "@/pages/tabs";
 import StrategicMode from "@/components/StrategicMode";
-import EditTable from "@/pages/editTable/classEditTable";
+import EditTable from "@/pages/editTable";
+import ClassEditTable from "@/pages/editTable/classEditTable";
+import ClassComponent from "@/pages/editTable/ClassComponent";
 import DesignPatterns from "@/components/DesignPatterns";
-
+import FormList from "@/pages/formList";
 export const rootRouter = [
   {
     path: "/",
@@ -52,13 +54,23 @@ export const rootRouter = [
   },
   {
     path: "/editTable",
-    element: <EditTable />,
+    element: <ClassComponent />,
     meta: {
       requiresAuth: false,
       title: "editTable",
       key: "editTable",
     },
   },
+  {
+    path: "/FormList",
+    element: <FormList />,
+    meta: {
+      requiresAuth: false,
+      title: "FormList",
+      key: "FormList",
+    },
+  },
+  
   // {
   //   path: "/button",
   //   element: <Button />,
