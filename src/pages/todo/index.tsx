@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import ColorPicker from '@/components/ColorPicker'
+
 const Todo = () => {
     const [items, setItems] = useState<any[]>([])
     const [inputValue, setInputValue] = useState<any>('')
@@ -75,6 +77,10 @@ const Todo = () => {
                     </li>
                 ))}
             </ul>
+
+            <br />
+
+            <ColorPicker onChange={(e:any) => setInputValue(e.target.value)}/>
         </div>
     )
 }

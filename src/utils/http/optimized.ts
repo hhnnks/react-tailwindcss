@@ -2,12 +2,12 @@ import type { InternalAxiosRequestConfig } from 'axios'
 
 import { RequestConfig } from './types'
 
-import { HttpEnum } from '/@/enum/http'
-import { MenuEnum } from '/@/enum/menu'
-import { useMessage } from '/@/hooks/message'
-import { clearPersistor } from '/@/redux/index'
-import { store } from '/@/redux/index'
-import { isString } from '/@/utils/is'
+import { HttpEnum } from '@/enum/http'
+import { MenuEnum } from '@/enum/menu'
+import { useMessage } from '@/hooks/message'
+// import { clearPersistor } from '@/redux/index'
+// import { store } from '@/redux/index'
+import { isString } from '@/utils/is'
 const { uesErrorMsg } = useMessage()
 export function OptimizedData(config: RequestConfig) {
     let { data, method } = config
@@ -53,7 +53,7 @@ export function ResponseSuccess(res: any) {
 
     if (code === HttpEnum.OVERDUE) {
         uesErrorMsg('登陆超时,请重新登录!')
-        clearPersistor()
+        // clearPersistor()
         window.location.hash = MenuEnum.BASE_LOGIN
         return data
     }

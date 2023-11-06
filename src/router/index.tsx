@@ -14,6 +14,8 @@ import FormList from '@/pages/formList'
 import Chat from '@/layouts/chat'
 import Context from '@/pages/context'
 import Todo from '@/pages/todo'
+import ScrollPage from '@/pages/scrollx'
+
 export const rootRouter = [
     {
         path: '/',
@@ -57,6 +59,16 @@ export const rootRouter = [
             key: 'todo'
         }
     },
+    {
+        path: '/ScrollPage',
+        element: <ScrollPage />,
+        meta: {
+            requiresAuth: false,
+            title: 'ScrollPage',
+            key: 'ScrollPage'
+        }
+    },
+    
 
     {
         path: '/componentTabs',
