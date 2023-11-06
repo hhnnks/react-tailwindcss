@@ -12,8 +12,8 @@ import ClassComponent from '@/pages/editTable/ClassComponent'
 import DesignPatterns from '@/components/DesignPatterns'
 import FormList from '@/pages/formList'
 import Chat from '@/layouts/chat'
-
 import Context from '@/pages/context'
+import Todo from '@/pages/todo'
 export const rootRouter = [
     {
         path: '/',
@@ -46,6 +46,15 @@ export const rootRouter = [
             requiresAuth: false,
             title: 'context',
             key: 'context'
+        }
+    },
+    {
+        path: '/todo',
+        element: <Todo />,
+        meta: {
+            requiresAuth: false,
+            title: 'todo',
+            key: 'todo'
         }
     },
 
