@@ -12,6 +12,8 @@ import ClassComponent from '@/pages/editTable/ClassComponent'
 import DesignPatterns from '@/components/DesignPatterns'
 import FormList from '@/pages/formList'
 import Chat from '@/layouts/chat'
+
+import Context from '@/pages/context'
 export const rootRouter = [
     {
         path: '/',
@@ -36,6 +38,17 @@ export const rootRouter = [
             key: 'chat'
         }
     },
+
+    {
+        path: '/context',
+        element: <Context />,
+        meta: {
+            requiresAuth: false,
+            title: 'context',
+            key: 'context'
+        }
+    },
+
     {
         path: '/componentTabs',
         element: <ComponentTabs />,
