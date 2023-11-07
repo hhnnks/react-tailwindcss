@@ -15,20 +15,20 @@ import Chat from '@/layouts/chat'
 import Context from '@/pages/context'
 import Todo from '@/pages/todo'
 import ScrollPage from '@/pages/scrollx'
-
+import PreImage from '@/pages/preImage'
 export const rootRouter = [
     {
         path: '/',
-        element: <Navigate to="/editTable" />
+        element: <Navigate to="/PreImage" />
     },
 
     {
-        path: '/login',
-        element: <Login />,
+        path: '/PreImage',
+        element: <PreImage />,
         meta: {
             requiresAuth: false,
-            title: 'login',
-            key: 'login'
+            title: 'PreImage',
+            key: 'PreImage'
         }
     },
     {

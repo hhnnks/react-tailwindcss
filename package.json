@@ -19,6 +19,7 @@
     "echarts": "^5.4.3",
     "json-server": "^0.17.4",
     "less": "^4.2.0",
+    "lodash": "^4.17.21",
     "postcss-pxtorem": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -31,6 +32,7 @@
     "workflow-bpmn-modeler": "^0.2.8"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.200",
     "@types/node": "^20.6.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
