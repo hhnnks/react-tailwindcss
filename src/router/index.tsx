@@ -15,7 +15,7 @@ import Chat from '@/layouts/chat'
 import Context from '@/pages/context'
 import Todo from '@/pages/todo'
 import ScrollPage from '@/pages/scrollx'
-import PreImage from '@/pages/preImage'
+import AntdSelect from '@/pages/antdSelect'
 export const rootRouter = [
     {
         path: '/',
@@ -23,8 +23,8 @@ export const rootRouter = [
     },
 
     {
-        path: '/PreImage',
-        element: <PreImage />,
+        path: '/AntdSelect',
+        element: <AntdSelect />,
         meta: {
             requiresAuth: false,
             title: 'PreImage',
