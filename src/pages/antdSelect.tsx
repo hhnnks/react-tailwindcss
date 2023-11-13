@@ -1,6 +1,6 @@
 import React from 'react'
 import { Select } from 'antd'
-// import { List } from 'react-virtualized'
+
 const data = new Array(1000).fill(1).map((item, index) => index)
 
 function AntdSelect() {
@@ -33,10 +33,6 @@ function AntdSelect() {
                     )
                 })}
             </Select>
-
-            {/* <List width={300} height={400} rowCount={1000} rowHeight={30} rowRenderer={rowRenderer}>
-              
-            </List> */}
         </div>
     )
 }

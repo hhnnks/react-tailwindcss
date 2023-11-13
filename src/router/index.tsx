@@ -15,16 +15,16 @@ import Chat from '@/layouts/chat'
 import Context from '@/pages/context'
 import Todo from '@/pages/todo'
 import ScrollPage from '@/pages/scrollx'
-import AntdSelect from '@/pages/antdSelect'
+import SingletonComponent from '@/pages/singletonComponent'
 export const rootRouter = [
     {
         path: '/',
-        element: <Navigate to="/PreImage" />
+        element: <Navigate to="/SingletonComponent" />
     },
 
     {
-        path: '/AntdSelect',
-        element: <AntdSelect />,
+        path: '/SingletonComponent',
+        element: <SingletonComponent />,
         meta: {
             requiresAuth: false,
             title: 'PreImage',
