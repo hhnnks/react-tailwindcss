@@ -16,15 +16,16 @@ import Context from '@/pages/context'
 import Todo from '@/pages/todo'
 import ScrollPage from '@/pages/scrollx'
 import SingletonComponent from '@/pages/singletonComponent'
+import PreImage from '@/pages/preImage'
 export const rootRouter = [
     {
         path: '/',
-        element: <Navigate to="/SingletonComponent" />
+        element: <Navigate to="/PreImage" />
     },
 
     {
-        path: '/SingletonComponent',
-        element: <SingletonComponent />,
+        path: '/PreImage',
+        element: <PreImage />,
         meta: {
             requiresAuth: false,
             title: 'PreImage',
