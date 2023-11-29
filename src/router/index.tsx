@@ -17,10 +17,21 @@ import Todo from '@/pages/todo'
 import ScrollPage from '@/pages/scrollx'
 import SingletonComponent from '@/pages/singletonComponent'
 import PreImage from '@/pages/preImage'
+import Batflow from '@/pages/batflow'
 export const rootRouter = [
     {
         path: '/',
-        element: <Navigate to="/PreImage" />
+        element: <Navigate to="/Batflow" />
+    },
+
+    {
+        path: '/Batflow',
+        element: <Batflow />,
+        meta: {
+            requiresAuth: false,
+            title: 'Batflow',
+            key: 'Batflow'
+        }
     },
 
     {
