@@ -1,6 +1,20 @@
 {
-  "list": {
-    "name": "JsonInheritanceConverter",
-    "name1": "JsonInheritanceConverter"
-  }
+    "list1": [
+        { "value": "jack1", "label": "Jack1" },
+        { "value": "lucy", "label": "Lucy" },
+        { "value": "Yiminghe", "label": "yiminghe" },
+        { "value": "disabled", "label": "Disabled", "disabled": true }
+    ],
+    "list2": [
+        { "value": "jack2", "label": "Jack2" },
+        { "value": "lucy", "label": "Lucy" },
+        { "value": "Yiminghe", "label": "yiminghe" },
+        { "value": "disabled", "label": "Disabled", "disabled": true }
+    ],
+    "list3": [
+        { "value": "jack3", "label": "Jack3" },
+        { "value": "lucy", "label": "Lucy" },
+        { "value": "Yiminghe", "label": "yiminghe" },
+        { "value": "disabled", "label": "Disabled", "disabled": true }
+    ]
 }

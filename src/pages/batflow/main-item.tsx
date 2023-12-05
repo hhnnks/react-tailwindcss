@@ -6,7 +6,8 @@ import { UploadOutlined } from '@ant-design/icons'
 import { PlusOutlined } from '@ant-design/icons'
 import { CRAD } from './config'
 import antdComponent from './antdComponent'
-
+import { ActionTypes } from '../context/types'
+import useAppContext from '../context/useContext'
 interface Props {
     data: any
     parentId: string
@@ -31,6 +32,7 @@ function isParentNode(type: string) {
 export default function MainItem({ data, parentId, index, mode, form }: Props) {
     const ref = useRef<HTMLDivElement | null>(null)
     const [positionDown, setPosition] = useState(true)
+    const { state, dispatch } = useAppContext()
 
     // 监听数据 赋值form
     //   useEffect(() => {
@@ -67,8 +69,29 @@ export default function MainItem({ data, parentId, index, mode, form }: Props) {
                 }
                 if (!item.data.id) {
                     console.log('走555555')
+                    dispatch({
+                        type: ActionTypes.APPENDCOM,
+                        value: {
+                            hoverParentId: parentId,
+                            hoverIndex: index,
+                            data,
+                            item: item.data,
+                            positionDown
+                        }
+                    })
                 } else {
-                    console.log('走44444444')
+                    dispatch({
+                        type: ActionTypes.MOVECOM,
+                        value: {
+                            hoverParentId: parentId,
+                            hoverIndex: index,
+                            dragParentId: item.dragParentId,
+                            dragIndex: item.dragIndex,
+                            data,
+                            item: item.data,
+                            positionDown
+                        }
+                    })
                 }
                 return undefined
             },
@@ -138,9 +161,20 @@ export default function MainItem({ data, parentId, index, mode, form }: Props) {
 
     const handleFocus = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         e.stopPropagation()
+        dispatch({
+            type: ActionTypes.SET_FOCUSID,
+            value: data.id
+        })
     }
     const handleRemove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         e.stopPropagation()
+        dispatch({
+            type: ActionTypes.REMOVECOM,
+            value: {
+                parentId,
+                id: data.id
+            }
+        })
     }
 
     let className = 'canvas-item-wrapper'

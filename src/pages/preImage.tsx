@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import { Image } from 'antd'
+import React, { useEffect, useState } from 'react'
+import { Image, Button } from 'antd'
 
 import img1 from '@/assets/preImage/111.jpg'
 import img2 from '@/assets/preImage/222.jpg'
 import img3 from '@/assets/preImage/333.jpg'
 import img4 from '@/assets/preImage/444.jpg'
 
-const ImagePreview = ({ imageUrl }:{imageUrl:any}) => {
+const ImagePreview = ({ imageUrl }: { imageUrl: any }) => {
     const [zoomLevel, setZoomLevel] = useState(1)
     const [rotationAngle, setRotationAngle] = useState(0)
     const [dragPosition, setDragPosition] = useState({ x: 0, y: 0 })
 
-    const handleZoom = (delta:any) => {
+    const handleZoom = (delta: any) => {
         setZoomLevel((prevZoom) => prevZoom + delta)
     }
 
@@ -19,12 +19,12 @@ const ImagePreview = ({ imageUrl }:{imageUrl:any}) => {
         setRotationAngle((prevAngle) => prevAngle + 90)
     }
 
-    const handleDragStart = (event:any) => {
+    const handleDragStart = (event: any) => {
         const { clientX, clientY } = event.touches ? event.touches[0] : event
         setDragPosition({ x: clientX, y: clientY })
     }
 
-    const handleDragMove = (event:any) => {
+    const handleDragMove = (event: any) => {
         event.preventDefault()
         const { clientX, clientY } = event.touches ? event.touches[0] : event
         const dx = clientX - dragPosition.x
@@ -56,12 +56,36 @@ const ImagePreview = ({ imageUrl }:{imageUrl:any}) => {
     )
 }
 
+function Demo1() {
+    const [count, setCount] = useState(0)
+
+    const gets = () => {
+        console.log(count, 'cout')
+    }
+
+    useEffect(() => {
+        gets()
+    }, [count])
+
+    return (
+        <div>
+            {count}
+            <Button
+                onClick={() => {
+                    setCount((count) => (count = 100))
+                }}
+            >
+                点击
+            </Button>
+        </div>
+    )
+}
+
 function PreImage() {
     return (
         <div>
-
-            <ImagePreview imageUrl={img1}/>
-
+            {/* <ImagePreview imageUrl={img1}/> */}
+            <Demo1 />
             {/* <Image width={200} height={200} src={img1} />
             <Image width={200} height={200} src={img2} />
             <Image width={200} height={200} src={img3} />

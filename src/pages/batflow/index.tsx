@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { DndProvider } from 'react-dnd'
 import { styled } from 'styled-components'
@@ -7,19 +7,29 @@ import Left from './left'
 import Main from './main'
 import Right from './right'
 
-function Batflow() {
+import { AppContext } from '../context/useContext'
+import { initState, reducer } from '../context/reducer'
+
+export default function Batflow() {
+    const [state, dispatch] = useReducer(reducer, initState)
+
     return (
-        <DndProvider backend={HTML5Backend}>
-            <BatflowContainer>
-                <Left />
-                <Main />
-                <Right />
-            </BatflowContainer>
-        </DndProvider>
+        <AppContext.Provider
+            value={{
+                state,
+                dispatch
+            }}
+        >
+            <DndProvider backend={HTML5Backend}>
+                <BatflowContainer>
+                    <Left />
+                    <Main />
+                    <Right />
+                </BatflowContainer>
+            </DndProvider>
+        </AppContext.Provider>
     )
 }
-
-export default Batflow
 
 const BatflowContainer = styled.div`
     width: 100%;

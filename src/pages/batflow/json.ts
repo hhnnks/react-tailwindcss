@@ -73,8 +73,38 @@ const data = [
                     readOnly: false
                 },
                 children: [],
-                name: 'sex',
-                type: 'Input',
+                name: 'projectId1',
+                type: 'Select',
+                id: uuid()
+            },
+            {
+                label: '项目编号',
+                props: {
+                    placeholder: '请输入',
+                    label: '项目编号',
+                    name: 'projectCode',
+                    required: false,
+                    disabled: false,
+                    readOnly: false
+                },
+                children: [],
+                name: 'projectId2',
+                type: 'Select',
+                id: uuid()
+            },
+            {
+                label: '项目编号',
+                props: {
+                    placeholder: '请输入',
+                    label: '项目编号',
+                    name: 'projectCode',
+                    required: false,
+                    disabled: false,
+                    readOnly: false
+                },
+                children: [],
+                name: 'projectId3',
+                type: 'Select',
                 id: uuid()
             }
         ]

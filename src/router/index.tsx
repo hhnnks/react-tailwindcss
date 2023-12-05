@@ -18,6 +18,7 @@ import ScrollPage from '@/pages/scrollx'
 import SingletonComponent from '@/pages/singletonComponent'
 import PreImage from '@/pages/preImage'
 import Batflow from '@/pages/batflow'
+import Forms from '@/pages/batflow/forms'
 export const rootRouter = [
     {
         path: '/',
@@ -33,9 +34,18 @@ export const rootRouter = [
             key: 'Batflow'
         }
     },
+    {
+        path: '/form',
+        element: <Forms />,
+        meta: {
+            requiresAuth: false,
+            title: 'Forms',
+            key: 'Forms'
+        }
+    },
 
     {
-        path: '/PreImage',
+        path: '/img',
         element: <PreImage />,
         meta: {
             requiresAuth: false,

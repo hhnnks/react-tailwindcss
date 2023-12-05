@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Button } from 'antd'
 import useAppContext from './useContext'
-import { ActionTypes } from './reducer'
+import { ActionTypes } from './types'
 function contextB() {
     const { contextValue, setContextValue, dispatch } = useAppContext()
 
