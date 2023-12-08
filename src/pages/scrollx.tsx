@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Row, Col, Button, Typography, Space } from 'antd'
 const { Title, Text } = Typography
-import { LeftOutlined, RightOutlined } from '@ant-design/icons'
+// import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
 
 function Scroll({ ScrollBox, move }: { ScrollBox: any; move?: number }) {
@@ -43,7 +43,7 @@ function Scroll({ ScrollBox, move }: { ScrollBox: any; move?: number }) {
                     onClick={toLeft}
                     style={{ visibility: `${scroll == 0 ? 'hidden' : 'visible'}` }}
                 >
-                    <LeftOutlined />
+                    {/* <LeftOutlined /> */}
                 </Button>
 
                 <Button
@@ -52,7 +52,7 @@ function Scroll({ ScrollBox, move }: { ScrollBox: any; move?: number }) {
                     onClick={toRight}
                     style={{ visibility: `${scroll <= maxVal ? 'hidden' : 'visible'}` }}
                 >
-                    <RightOutlined />
+                    {/* <RightOutlined /> */}
                 </Button>
 
                 <div style={{ overflow: 'hidden' }}>

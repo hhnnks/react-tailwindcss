@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Row, Col, Button, Typography, Space } from "antd";
+import { Row, Col, Button, Typography } from "antd";
 const { Title, Text } = Typography;
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+// import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 
 export default function AnimateIcon() {

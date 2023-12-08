@@ -19,6 +19,7 @@ import SingletonComponent from '@/pages/singletonComponent'
 import PreImage from '@/pages/preImage'
 import Batflow from '@/pages/batflow'
 import Forms from '@/pages/batflow/forms'
+import Demos from '@/pages/demos'
 export const rootRouter = [
     {
         path: '/',
@@ -32,6 +33,15 @@ export const rootRouter = [
             requiresAuth: false,
             title: 'Batflow',
             key: 'Batflow'
+        }
+    },
+    {
+        path: '/demo',
+        element: <Demos />,
+        meta: {
+            requiresAuth: false,
+            title: 'Demos',
+            key: 'Demos'
         }
     },
     {
