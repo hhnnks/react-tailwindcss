@@ -17,6 +17,7 @@
     "antd-v3": "npm:antd@^3.26.19",
     "axios": "^1.5.1",
     "bpmn-js": "^13.2.2",
+    "dexie": "^3.2.4",
     "echarts": "^5.4.3",
     "json-server": "^0.17.4",
     "less": "^4.2.0",

@@ -20,6 +20,7 @@ import PreImage from '@/pages/preImage'
 import Batflow from '@/pages/batflow'
 import Forms from '@/pages/batflow/forms'
 import Demos from '@/pages/demos'
+import Dexie from '@/pages/dexie'
 export const rootRouter = [
     {
         path: '/',
@@ -42,6 +43,15 @@ export const rootRouter = [
             requiresAuth: false,
             title: 'Demos',
             key: 'Demos'
+        }
+    },
+    {
+        path: '/dexie',
+        element: <Dexie />,
+        meta: {
+            requiresAuth: false,
+            title: 'dexie',
+            key: 'dexie'
         }
     },
     {
