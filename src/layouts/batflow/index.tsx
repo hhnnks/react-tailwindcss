@@ -1,63 +1,24 @@
-import React, { useState } from 'react';
-import { useDrag } from 'react-dnd';
-import { Grid, Draggable } from 'react-dnd-grid';
+import React, { useState } from 'react'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 const BatFlow = () => {
- const [grid, setGrid] = useState([
-   { id: 1, x: 0, y: 0 },
-   { id: 2, x: 1, y: 0 },
-   { id: 3, x: 2, y: 0 },
-   { id: 4, x: 0, y: 1 },
-   { id: 5, x: 1, y: 1 },
-   { id: 6, x: 2, y: 1 },
- ]);
+    const [grid, setGrid] = useState([
+        { id: 1, x: 0, y: 0 },
+        { id: 2, x: 1, y: 0 },
+        { id: 3, x: 2, y: 0 },
+        { id: 4, x: 0, y: 1 },
+        { id: 5, x: 1, y: 1 },
+        { id: 6, x: 2, y: 1 }
+    ])
 
- const handleDrag = useDrag(() => ({
-   type: 'grid',
-   item: grid[0],
-   collect: (monitor) => ({
-     items: grid,
-     item: monitor.getItem(),
-     collector: monitor.collector,
-   }),
- }));
+    return (
+        <div>
+            <DndProvider backend={HTML5Backend}>
+              dnd
+            </DndProvider>
+        </div>
+    )
+}
 
- return (
-   <div>
-     <Grid grid={grid} onDrag={handleDrag}>
-       <Draggable>
-         <div>
-           <div>1</div>
-         </div>
-       </Draggable>
-       <Draggable>
-         <div>
-           <div>2</div>
-         </div>
-       </Draggable>
-       <Draggable>
-         <div>
-           <div>3</div>
-         </div>
-       </Draggable>
-       <Draggable>
-         <div>
-           <div>4</div>
-         </div>
-       </Draggable>
-       <Draggable>
-         <div>
-           <div>5</div>
-         </div>
-       </Draggable>
-       <Draggable>
-         <div>
-           <div>6</div>
-         </div>
-       </Draggable>
-     </Grid>
-   </div>
- );
-};
-
-export default BatFlow;
+export default BatFlow

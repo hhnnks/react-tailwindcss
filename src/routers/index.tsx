@@ -21,6 +21,7 @@ import Batflow from '@/pages/batflow'
 import Forms from '@/pages/batflow/forms'
 import Demos from '@/pages/demos'
 import Dexie from '@/pages/dexie'
+import TransitionGroup from '@/pages/transitionGroup'
 export const rootRouter = [
     {
         path: '/',
@@ -43,6 +44,15 @@ export const rootRouter = [
             requiresAuth: false,
             title: 'Demos',
             key: 'Demos'
+        }
+    },
+    {
+        path: '/transitionGroup',
+        element: <TransitionGroup />,
+        meta: {
+            requiresAuth: false,
+            title: 'transitionGroup',
+            key: 'transitionGroup'
         }
     },
     {
