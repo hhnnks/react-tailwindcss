@@ -7,9 +7,11 @@ import React, {
     useImperativeHandle
 } from 'react'
 
-import { Space, Modal, Button, Popover } from 'antd'
+import { Space, Modal, Button, Popover, DatePicker } from 'antd'
 
 const MyContext = React.createContext<any>(null!)
+
+const { RangePicker } = DatePicker
 
 export default function Demos() {
     return (
@@ -56,7 +58,11 @@ class MyComponent extends Component {
         return (
             <div>
                 <input type="text" value={this.state.name} onChange={this.handleChange} />
-                <Button onClick={() => this.handleOk()}>Modal</Button>
+
+                {/* <Tooltip title="adsfadfasdfsaf">Tooltip</Tooltip> */}
+
+                <RangePicker />
+
                 <MyContext.Provider
                     value={{
                         ...this.state,
