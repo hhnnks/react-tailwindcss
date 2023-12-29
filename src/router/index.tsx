@@ -27,7 +27,7 @@ import Home from '@/pages/reactTransitionGroup/Home'
 import About from '@/pages/reactTransitionGroup/About'
 import Contact from '@/pages/reactTransitionGroup/Contact'
 import Demo1 from '@/pages/demo1'
-
+import Iframe from '@/pages/demos/Iframe'
 
 export const rootRouter = [
     {
@@ -71,6 +71,15 @@ export const rootRouter = [
                 },
             }
         ]
+    },
+    {
+        path: '/iframe',
+        element: <Iframe />,
+        meta: {
+            requiresAuth: false,
+            title: 'Iframe',
+            key: 'Iframe'
+        }
     },
     {
         path: '/Batflow',
