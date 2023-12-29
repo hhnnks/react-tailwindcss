@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import Router from "./routers";
+import Router from "./router";
 
 function App() {
   return <Router />;

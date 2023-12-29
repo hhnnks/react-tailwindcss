@@ -1,0 +1,64 @@
+.container {
+    position: relative;
+}
+
+.page {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+}
+
+.page-enter {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.page-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+
+
+/* 入场动画过程 */
+.animate-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.animate-enter-active {
+    transition: 2s;
+    opacity: 1;
+    transform: translateX(0px);
+}
+.animate-enter-done {
+    opacity: 1;
+    transform: translateX(0px);
+}
+/* 出场动画过程 */
+.animate-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+.animate-exit-active {
+    transition: 0s;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.animate-exit-done {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/*   ============== */

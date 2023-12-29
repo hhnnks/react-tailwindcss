@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useRoutes } from 'react-router-dom'
+import { Navigate, useRoutes, createHashRouter } from 'react-router-dom'
 
 import lazyLoad from './lazyLoad'
 import Login from '@/pages/login'
@@ -22,12 +22,56 @@ import Forms from '@/pages/batflow/forms'
 import Demos from '@/pages/demos'
 import Dexie from '@/pages/dexie'
 import TransitionGroup from '@/pages/transitionGroup'
+import ReactTransitionGroup from '@/pages/reactTransitionGroup'
+import Home from '@/pages/reactTransitionGroup/Home'
+import About from '@/pages/reactTransitionGroup/About'
+import Contact from '@/pages/reactTransitionGroup/Contact'
+import Demo1 from '@/pages/demo1'
+
+
 export const rootRouter = [
     {
         path: '/',
         element: <Navigate to="/Batflow" />
     },
-
+    {
+        path: '/ReactTransitionGroup',
+        element: <ReactTransitionGroup />,
+        meta: {
+            requiresAuth: false,
+            title: 'ReactTransitionGroup',
+            key: 'ReactTransitionGroup'
+        },
+        children:[
+            {
+                path: 'Home',
+                element: <Home />,
+                meta: {
+                    requiresAuth: false,
+                    title: 'Home',
+                    key: 'Home'
+                },
+            },
+            {
+                path: 'About',
+                element: <About />,
+                meta: {
+                    requiresAuth: false,
+                    title: 'Home',
+                    key: 'Home'
+                },
+            },
+            {
+                path: 'Contact',
+                element: <Contact />,
+                meta: {
+                    requiresAuth: false,
+                    title: 'Home',
+                    key: 'Home'
+                },
+            }
+        ]
+    },
     {
         path: '/Batflow',
         element: <Batflow />,
@@ -168,6 +212,17 @@ export const rootRouter = [
         }
     },
 
+    {
+        path: '/demo1',
+        element: <Demo1 />,
+        meta: {
+            requiresAuth: false,
+            title: 'FormList',
+            key: 'FormList'
+        }
+    },
+
+
     // {
     //   path: "/button",
     //   element: <Button />,
@@ -202,6 +257,7 @@ export const rootRouter = [
         element: <Navigate to="/404" />
     }
 ]
+
 
 const Router = () => {
     const routes = useRoutes(rootRouter)
