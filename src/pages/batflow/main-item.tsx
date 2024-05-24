@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useDrop, useDrag } from 'react-dnd'
 import { getEmptyImage } from 'react-dnd-html5-backend'
 import { Button, Form, Input } from 'antd'
-import { UploadOutlined } from '@ant-design/icons'
-import { PlusOutlined } from '@ant-design/icons'
+// import { UploadOutlined } from '@ant-design/icons'
+// import { PlusOutlined } from '@ant-design/icons'
 import { CRAD } from './config'
 import antdComponent from './antdComponent'
 import { ActionTypes } from '../context/types'
@@ -230,7 +230,7 @@ export default function MainItem({ data, parentId, index, mode, form }: Props) {
 
     const uploadButton = (
         <div>
-            <PlusOutlined />
+            {/* <PlusOutlined /> */}
             <div style={{ marginTop: 8 }}>点击上传</div>
         </div>
     )
@@ -290,7 +290,7 @@ export default function MainItem({ data, parentId, index, mode, form }: Props) {
                             {data.type === 'UploadImage' ? (
                                 uploadButton
                             ) : data.type === 'UploadFile' ? (
-                                <Button icon={<UploadOutlined />}>选择文件</Button>
+                                <Button>选择文件</Button>
                             ) : !isParentNode(data.type) ? (
                                 (data.props || {}).children
                             ) : (
